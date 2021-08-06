@@ -5,7 +5,7 @@ ShopBridge
 Basically this site is for add the item on your inventory.
 the item is also modify the item,delete the item.
 
-for Frontend use for boostrap
+For Frontend use for boostrap
 
 Programming language use is
 Python
