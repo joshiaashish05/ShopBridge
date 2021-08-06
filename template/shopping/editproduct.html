@@ -1,0 +1,16 @@
+{% extends "shopping/base.html" %}
+
+{% block content %}
+    {{error}}
+    <H1>Edit product</H1>
+    {{ product.title }}
+    <form method="POST" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="button">Save</button>
+    </form>
+    <form method="POST" action="{% url 'shopping:deleteproduct' product.id %}" >
+        {% csrf_token %}
+        <button type="submit">delete</button>
+    </form>
+{% endblock %}

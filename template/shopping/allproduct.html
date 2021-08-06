@@ -1,0 +1,16 @@
+{% extends 'shopping/base.html' %}
+
+
+{% block content %}
+  {% for product in product %}
+  <div class="card" style="width: 18rem; flex-direction: row;">
+    <a href="{% url 'shopping:editproduct' product.id %}">
+      <img src="/media/{{product.image}}" class="card-img-top">
+      <div class="card-body" style="width: 18rem">
+        <h5 class="card-title"> {{ product.product_name }}</h5></a>
+        <label for="price">price</label><h6 class="product_price">{{ product.product_price }}</h6>
+        <p class="card-text">{{ product.desc }}</p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
